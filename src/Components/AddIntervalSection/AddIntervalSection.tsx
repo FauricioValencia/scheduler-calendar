@@ -188,7 +188,9 @@ export default function AddIntervalSection(props: Props) {
         onSubmit={() => {}}
         disableSubmit={!props.isEditEnabled}
       >
-        {({ values, handleChange, handleBlur, setFieldValue }: any) => {
+        {({ values, handleChange, handleBlur, 
+        // setFieldValue 
+      }: any) => {
           return (
             <form noValidate>
               {!isApplyToMultiple ? (
