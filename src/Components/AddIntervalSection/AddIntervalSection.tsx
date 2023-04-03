@@ -144,12 +144,12 @@ export default function AddIntervalSection(props: Props) {
     setState({ errors: error })
   }
 
-  const resetAllErrorField = () => {
-    // set errors as empty
-    setState({
-      errors: {}
-    })
-  }
+  // const resetAllErrorField = () => {
+  //   // set errors as empty
+  //   setState({
+  //     errors: {}
+  //   })
+  // }
 
   const resetErrorField = (index: number) => {
     const errors = state.errors
