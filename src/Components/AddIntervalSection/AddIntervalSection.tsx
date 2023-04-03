@@ -194,7 +194,7 @@ export default function AddIntervalSection(props: Props) {
               {!isApplyToMultiple ? (
                 <div className={styles.intervalContainer}>
                   <div className={styles.modalTitle}>
-                    {`${props.isEditEnabled ? 'Edit' : 'View'}`} Availability
+                    {`${props.isEditEnabled ? 'Editar' : 'Vista'}`} Disponibilidad
                   </div>
                   <FieldArray
                     name='intervals'
@@ -202,8 +202,8 @@ export default function AddIntervalSection(props: Props) {
                       <div className={clsx(styles.formBlock, styles.inputs)}>
                         {values.intervals.length !== 0 ? (
                           <div className={styles.timeTitleWrap}>
-                            <div className={styles.timeFrom}>From</div>
-                            <div className={styles.timeTo}>To</div>
+                            <div className={styles.timeFrom}>Desde</div>
+                            <div className={styles.timeTo}>Hasta</div>
                           </div>
                         ) : undefined}
                         {values.intervals.map((_item: any, index: any) => (
@@ -335,7 +335,7 @@ export default function AddIntervalSection(props: Props) {
                             disabled={!props.isEditEnabled}
                           ></textarea>
                         </div>
-                        {props.isEditEnabled && (
+                        {/* {props.isEditEnabled && (
                           <div className={styles.unavailableBtnWrap}>
                             <div
                               onClick={() => {
@@ -352,7 +352,7 @@ export default function AddIntervalSection(props: Props) {
                               I’m unavailable
                             </div>
                           </div>
-                        )}
+                        )} */}
                         {props.isEditEnabled && (
                           <div className={styles.container}>
                             <div className={styles.btnWrap}>
@@ -368,7 +368,7 @@ export default function AddIntervalSection(props: Props) {
                                     )
                                   }
                                 >
-                                  Apply to {intervalDate.format('DD MMM')} only
+                                  Aplicar a {intervalDate.format('DD MMM')} solo
                                 </button>
                                 <button
                                   type='button'
@@ -383,10 +383,10 @@ export default function AddIntervalSection(props: Props) {
                                     )
                                   }
                                 >
-                                  Apply to all {intervalDate.format('dddd')}
+                                  Aplicar todos {intervalDate.format('dddd')}
                                 </button>
                               </div>
-                              <button
+                              {/* <button
                                 type='button'
                                 className={styles.applyMultiple}
                                 onClick={() =>
@@ -399,7 +399,7 @@ export default function AddIntervalSection(props: Props) {
                                 }
                               >
                                 or apply to multiple
-                              </button>
+                              </button> */}
                             </div>
                           </div>
                         )}
@@ -409,7 +409,7 @@ export default function AddIntervalSection(props: Props) {
                 </div>
               ) : (
                 <div className={styles.applyContainer}>
-                  <div className={styles.applyTitle}>Apply to multiple</div>
+                  <div className={styles.applyTitle}>Aplciar Multiple</div>
                   <div className={styles.applyInnerContainer}>
                     <WeekDayForm
                       onBack={() => {
