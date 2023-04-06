@@ -8,6 +8,7 @@
 import moment from 'moment'
 
 export function getDateRangeTitle(start: any, end: any) {
+  moment.locale('es')
   const startDate: any = start
   const endDate: any = end
   const startDay = moment(startDate).format('D')
@@ -24,6 +25,8 @@ export function getDateRangeTitle(start: any, end: any) {
 }
 
 export function getMidDayTime(time: string) {
+  moment.locale('es')
+
   const midDay = moment(time, 'HH:mm').format('a')
   const times = moment(time, 'HH:mm').format('h:mm')
   if (midDay === 'am') {

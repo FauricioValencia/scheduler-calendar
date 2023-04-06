@@ -72,6 +72,7 @@ export default function AddIntervalSection(props: Props) {
     if (interval.from && !interval.to) {
       return 'End time cannot be blank.'
     }
+    moment.locale('es')
 
     const startTime = props.is24hour
       ? moment(interval.from, 'HH:mm')
@@ -163,6 +164,7 @@ export default function AddIntervalSection(props: Props) {
 
   const _renderIntervalSection = () => {
     const { errors, isApplyToMultiple } = state
+    moment.locale('es')
 
     const intervalDate = moment(props.intervalDetails.day)
 

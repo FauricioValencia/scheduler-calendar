@@ -68,6 +68,7 @@ export default function SchedulerCalendar(props: Props) {
     isCommentEnabled = false,
     isEditEnabled = true
   } = props
+  moment.locale('es')
 
   const [availabilitiesData, setAvailabilitiesData] = React.useState(
     props.availabilities

@@ -96,6 +96,7 @@ export default class Calendar extends React.Component<
 
     const availabilityType = this.props.availabilityType
     if (availabilityType === availabilityTypes.Rolling) {
+      moment.locale('es')
       startDate = moment().format('YYYY-MM-DD')
       endDate = moment()
         .add(this.props.availabilityRolling, 'days')
@@ -397,6 +398,8 @@ export default class Calendar extends React.Component<
   }
 
   componentDidMount() {
+    moment.locale('es')
+    
     this.getAvailibilityRangeData()
     this.getAvailibilityData()
     this.getScreenWidth()

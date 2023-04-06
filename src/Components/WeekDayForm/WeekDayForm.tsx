@@ -53,6 +53,8 @@ export default function WeekDayForm(props: Props) {
     const weeks: string[] = [];
     value.forEach((item: WeekDays) => {
       if (item.value) {
+        moment.locale('es')
+
         weeks.push(moment(item.label, "dddd").format("ddd").toLowerCase());
       }
     });

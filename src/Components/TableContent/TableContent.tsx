@@ -40,6 +40,8 @@ export default class TableContent extends React.Component<Props, State> {
   }
 
   _renderCalendar = () => {
+    moment.locale('es')
+
     const { date } = this.props;
     let i = 0;
 
@@ -63,6 +65,7 @@ export default class TableContent extends React.Component<Props, State> {
 
   _renderByDay = (currDayInMonth: any) => {
     const daysToRender = []
+    moment.locale('es')
 
     const dayIntervalData = this.timeInterval(currDayInMonth.format())
     const isToday = currDayInMonth.diff(moment().startOf('day'), 'days') === 0
