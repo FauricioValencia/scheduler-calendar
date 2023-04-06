@@ -286,7 +286,7 @@ export default function AddIntervalSection(props: Props) {
                               }}
                               className={styles.addBtn}
                             >
-                              <AddSvg /> new interval
+                              <AddSvg /> nuevo intervalo
                             </div>
                           ) : (
                             <div></div>
